@@ -1,0 +1,22 @@
+services:
+  microservices:
+    image: golang:1.23.6
+    volumes:
+      - ../serviceA:/workspaces/serviceA:cached
+      - ../serviceB:/workspaces/serviceB:cached
+      - ../test.http:/workspaces/test.http:cached
+    working_dir: /workspaces
+    command: sleep infinity
+    ports:
+      - 8000:8000
+    networks:
+      - my_network
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - my_network
+networks:
+  my_network:
