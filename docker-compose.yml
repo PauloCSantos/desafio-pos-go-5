@@ -12,7 +12,6 @@ services:
     depends_on:
       - serviceB
       - zipkin
-    restart: unless-stopped
 
   serviceB:
     image: golang:1.23.6
@@ -24,7 +23,6 @@ services:
       - my_network
     depends_on:
       - zipkin
-    restart: unless-stopped
 
   zipkin:
     image: openzipkin/zipkin

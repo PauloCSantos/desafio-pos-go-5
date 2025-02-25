@@ -13,7 +13,10 @@
 
 ## Requisitos
 
-- **APIKEY do weatherapi**: https://www.weatherapi.com/
+**⚠️ Importante:**  
+ Para utilizar esta aplicação, configure a variável de ambiente `API_KEY` com uma chave válida.
+
+**APIKEY do weatherapi**: https://www.weatherapi.com/
 
 ## Configuração
 
